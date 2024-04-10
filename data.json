@@ -148,6 +148,34 @@
             },
             "type": "IN_GENRE",
             "relProperties": {}
+        },
+        {
+            "label1": "Director",
+            "label2": "Movie",
+            "properties1": {
+                "imdbId": "P3"
+            },
+            "properties2": {
+                "imdbId": "M1"
+            },
+            "type": "DIRECTED",
+            "relProperties": {
+                "role": "Director"
+            }
+        },
+        {
+            "label1": "Actor",
+            "label2": "Movie",
+            "properties1": {
+                "imdbId": "P2"
+            },
+            "properties2": {
+                "imdbId": "M1"
+            },
+            "type": "ACTED_IN",
+            "relProperties": {
+                "role": "Extra"
+            }
         }
     ]
 }

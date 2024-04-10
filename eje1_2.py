@@ -9,10 +9,8 @@ if __name__ == "__main__":
 
 
 
-    with open('data.json', 'r') as archivo:
+    with open('data.json', 'r', encoding="utf-8") as archivo:
         data = json.load(archivo)
-        print(data)
-
 
         try:
 
