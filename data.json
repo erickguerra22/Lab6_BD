@@ -91,6 +91,55 @@
             "properties": {
                 "name": "Drama"
             }
+        },
+        {
+            "labels": [
+                "Person",
+                "Actor",
+                "Director"
+            ],
+            "properties": {
+                "name": "Leonardo DiCaprio",
+                "tmdbId": "P4",
+                "born": "1974-11-11",
+                "bornIn": "Los Angeles, California, USA",
+                "url": "leonardodicaprio.com",
+                "imdbId": "P4",
+                "bio": "Leonardo Wilhelm DiCaprio is an American actor, producer, and environmentalist.",
+                "poster": "https://example.com/leonardo-dicaprio-poster.jpg"
+            }
+        },
+        {
+            "labels": [
+                "User"
+            ],
+            "properties": {
+                "name": "Maria Rodriguez",
+                "userId":"U2"
+            }
+        },
+        {
+            "labels": [
+                "Movie"
+            ],
+            "properties": {
+                "title": "Inception",
+                "tmdbId":"M2",
+                "released":"2010-07-16",
+                "imdbRating":"8.8",
+                "movieId":"tt1375666",
+                "year":"2010",
+                "imdbId":"tt1375666",
+                "runtime":"148",
+                "countries":["USA","UK"],
+                "imdbVotes":"2,000,000",
+                "url":"https://www.imdb.com/title/tt1375666/",
+                "revenue":"828,322,032",
+                "plot":"Inception is a 2010 science fiction action film written and directed by Christopher Nolan. Dom Cobb, a thief who enters the dreams of others to steal secrets from their subconscious.",
+                "poster":"https://example.com/inception-poster.jpg",
+                "budget":"160,000,000",
+                "languages":["English","Japanese","French"]
+            }
         }
     ],
     "relations": [
@@ -175,6 +224,49 @@
             "type": "ACTED_IN",
             "relProperties": {
                 "role": "Extra"
+            }
+        },
+        {
+            "label1": "Actor",
+            "label2": "Movie",
+            "properties1": {
+                "imdbId": "P4"
+            },
+            "properties2": {
+                "imdbId": "tt1375666"
+            },
+            "type": "ACTED_IN",
+            "relProperties": {
+                "role": "Dom Cobb"
+            }
+        },
+        {
+            "label1": "User",
+            "label2": "Movie",
+            "properties1": {
+                "userId": "U2"
+            },
+            "properties2": {
+                "imdbId": "tt1375666"
+            },
+            "type": "RATED",
+            "relProperties": {
+                "rating": "9",
+                "timestamp": "1637200000" 
+            }
+        },
+        {
+            "label1": "Actor",
+            "label2": "Movie",
+            "properties1": {
+                "imdbId": "P4"
+            },
+            "properties2": {
+                "imdbId": "M1"
+            },
+            "type": "ACTED_IN",
+            "relProperties": {
+                "role": "Jack Dawson"
             }
         }
     ]
