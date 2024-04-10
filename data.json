@@ -1,0 +1,153 @@
+{
+    "nodes": [
+        {
+            "labels": [
+                "Person",
+                "Actor",
+                "Director"
+            ],
+            "properties": {
+                "name": "Juan",
+                "tmdbId": "P1",
+                "born": "2000-04-09",
+                "died": "2020-01-15",
+                "bornIn": "Guatemala",
+                "url": "juan.com",
+                "imdbId": "P1",
+                "bio": "Actor reconocido",
+                "poster": "Poster de Juan"
+            }
+        },
+        {
+            "labels": [
+                "Person",
+                "Actor"
+            ],
+            "properties": {
+                "name": "Gabriel Pérez",
+                "tmdbId": "P2",
+                "born": "1970-02-09",
+                "died": "2020-10-15",
+                "bornId": "México",
+                "url": "gperez.com",
+                "imdbId": "P2",
+                "bio": "Actor reconocido",
+                "poster": "Poster de Gabriel"
+            }
+        },
+        {
+            "labels": [
+                "Person",
+                "Director"
+            ],
+            "properties": {
+                "name": "Isaac Gómez",
+                "tmdbId": "P3",
+                "born": "1985-01-23",
+                "died": "2023-02-12",
+                "bornId": "Costa Rica",
+                "url": "igomez.com",
+                "imdbId": "P3",
+                "bio": "Actor reconocido",
+                "poster": "Poster de Isaac"
+            }
+        },
+        {
+            "labels": [
+                "User"
+            ],
+            "properties": {
+                "name": "Erick Guerra",
+                "userId":"U1"
+            }
+        },
+        {
+            "labels": [
+                "Movie"
+            ],
+            "properties": {
+                "title": "Titanic",
+                "tmdbId":"M1",
+                "released":"1997-12-19",
+                "imdbRating":"7.8",
+                "movieId":"M1",
+                "year":"1997",
+                "imdbId":"M1",
+                "runtime":"194",
+                "countries":["USA","Mexico","Canada","Guatemala"],
+                "imdbVotes":"1,000,000",
+                "url":"titanic.com",
+                "revenue":"2,000,000",
+                "plot":"Titanic es una película de 1997 dirigida por James Cameron y protagonizada por Leonardo DiCaprio y Kate Winslet. La historia se basa en el hundimiento del RMS Titanic y cuenta la historia de amor entre Jack y Rose.",
+                "poster":"Poster de Titanic",
+                "budget":"200,000",
+                "languages":["Inglés","Español","Francés"]
+            }
+        },
+        {
+            "labels": [
+                "Genre"
+            ],
+            "properties": {
+                "name": "Drama"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "label1": "Actor",
+            "label2": "Movie",
+            "properties1": {
+                "imdbId": "P1"
+            },
+            "properties2": {
+                "imdbId": "M1"
+            },
+            "type": "ACTED_IN",
+            "relProperties": {
+                "role": "Jack Dawson"
+            }
+        },
+        {
+            "label1": "Director",
+            "label2": "Movie",
+            "properties1": {
+                "imdbId": "P1"
+            },
+            "properties2": {
+                "imdbId": "M1"
+            },
+            "type": "DIRECTED",
+            "relProperties": {
+                "role": "Director"
+            }
+        },
+        {
+            "label1": "User",
+            "label2": "Movie",
+            "properties1": {
+                "userId": "U1"
+            },
+            "properties2": {
+                "imdbId": "M1"
+            },
+            "type": "RATED",
+            "relProperties": {
+                "rating": "5",
+                "timestamp": "10"
+            }
+        },
+        {
+            "label1": "Movie",
+            "label2": "Genre",
+            "properties1": {
+                "imdbId": "M1"
+            },
+            "properties2": {
+                "name": "Drama"
+            },
+            "type": "IN_GENRE",
+            "relProperties": {}
+        }
+    ]
+}
